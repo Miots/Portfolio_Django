@@ -1,0 +1,25 @@
+{% load static %}
+<section id="contact" class="contact-section">
+    <h2 class="animate__animated animate__fadeInDown">Contact</h2>
+    <form method="post" class="contact-form animate__animated animate__fadeInUp">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+    <p>Phone: +261 34 12 345 67</p>
+    <p>Contact me: 
+        <a href="https://linkedin.com/in/miotisoa" target="_blank" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/miotisoa" target="_blank" class="contact-icon"><i class="fab fa-github"></i></a>
+        <a href="https://facebook.com" target="_blank" class="contact-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://whatsapp.com" target="_blank" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:miotsrandriamihaja@mail.com" target="_blank" class="contact-icon"><i class="fas fa-envelope"></i></a>
+    </p>    
+</section>

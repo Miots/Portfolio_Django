@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css"/>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <button id="theme-toggle-btn" class="btn">
+            <i id="theme-icon" class="bi bi-sun"></i>
+        </button>
+        {% include 'portfolio/navbar.html' %}    
+        
+    </header>
+    
+    <main>
+        {% include 'portfolio/about.html' %}
+        {% include 'portfolio/skills.html' %}
+        {% include 'portfolio/projects.html' %}
+        {% include 'portfolio/services.html' %}
+        {% include 'portfolio/certifications.html' %}
+        {% include 'portfolio/contact.html' %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Miotisoa RANDRIAMIHAJA. All rights reserved.</p>
+    </footer>
+</body>
+<script src="{% static 'js/scripts.js' %}"></script>
+</html>

@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <button id="toggle-btn">
+            <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+        </button>
+        
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+            
+        <button id="theme-toggle-btn" class="btn">
+            <i id="theme-icon" class="bi bi-sun"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <img src="{% static 'img/profile.jpg' %}" alt="Profile Picture" class="profile-picture">
+                <div class="about-info">
+                    <h2>Hello, I'm Miotisoa RANDRIAMIHAJA</h2>
+                    <p>
+                        I am a junior web developer. I specialize in building modern, efficient, and visually appealing web applications. 
+                        I am passionate about technology and love solving complex problems with code.
+                    </p>
+                    <p>My goal is to work on challenging projects that push the boundaries of my skills while contributing to impactful solutions.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skills-group">
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-html5"></i> HTML <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="90"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-css3"></i> CSS <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="90"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-javascript"></i> JavaScript <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-python"></i> Python <i class="val">90%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="90"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-bootstrap"></i> Bootstrap <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-django"></i> Django <i class="val">80%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="80"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-react"></i> ReactJS <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-flask"></i> Flask <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-tux"></i> Linux <i class="val">70%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="70"></div>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <span class="skill"><i class="bx bxl-git"></i> Git, <i class="bx bxl-github"></i> Github <i class="val">80%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" data-value="80"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+              <h2>My Projects</h2>
+              <div class="project">
+                  <img src="{% static 'img/portfolio/java-ide-web.png' %}" alt="Project 1 Image" class="project-image">
+                  <div class="project-details">
+                      <h3>Project 1</h3>
+                      <p>A web application for managing tasks efficiently. Built with Django and Python.</p>
+                  </div>
+              </div>
+              <div class="project">
+                  <img src="{% static 'img/portfolio/produit.png' %}" alt="Project 2 Image" class="project-image">
+                  <div class="project-details">
+                      <h3>Project 2</h3>
+                      <p>An e-commerce website with dynamic product listings and a user-friendly interface. Developed using HTML, CSS, and JavaScript.</p>
+                  </div>
+              </div>
+          </section>
+          
+          <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    Web Development
+                </li>
+                <li>
+                    <i class="fas fa-tools"></i>
+                    Application Maintenance
+                </li>
+                <li>
+                    <i class="fas fa-search"></i>
+                    SEO Optimization
+                </li>
+            </ul>
+        </section>
+        
+        <section id="certifications">
+            <h2 class="certifications-title">Certifications</h2>
+            <div id="certificationGallery" class="gallery-container">
+                <div class="certification-gallery">
+                    <img src="{% static 'img/certificate/certificate-freecodecamp-javascript-algo-data-structure.png' %}" 
+                         alt="JavaScript Algorithm and Data Structure" class="certification-image">
+                    <img src="{% static 'img/certificate/certificate-freecodecamp-responsive-web-design.jpeg' %}" 
+                         alt="Responsive Web Design Certification" class="certification-image">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <p>Phone: +261 34 12 345 67</p>
+            <p>Contact me: 
+                <a href="https://linkedin.com/in/miotisoa" target="_blank">LinkedIn</a>, 
+                <a href="https://github.com/miotisoa" target="_blank">GitHub</a>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://whatsapp.com" target="_blank">Whatsapp</a>
+                <a href="https://mail.com" target="_blank">Email</a>
+            </p>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Miotisoa RANDRIAMIHAJA. All rights reserved.</p>
+    </footer>
+</body>
+<script src="{% static 'js/scripts.js' %}"></script>
+</html>
