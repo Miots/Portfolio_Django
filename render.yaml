@@ -10,7 +10,5 @@ services:
         value: "django-insecure-))8x##(sdq1em2x35#t%!%9jse+3y%y9%ak23@r_=2dv%a^35s"
       - key: DJANGO_SETTINGS_MODULE
         value: "miots_portfolio.settings"
-      - key: DJANGO_SETTINGS_MODULE
-        value: "your_project_name.settings"
-  staticPublishPath: /static
+  staticPublishPath: portfolio/static
   staticSource: staticfiles
