@@ -1,0 +1,194 @@
+/* Variables CSS pour le mode clair et sombre */
+:root {
+  --background: #ffffff; /* Couleur de fond en mode clair */
+  --text: #000000; /* Couleur du texte en mode clair */
+  --primary: #4f46e5; /* Couleur principale (bleu) */
+  --secondary: #a78bfa; /* Couleur secondaire (violet) */
+}
+
+[data-theme="dark"] {
+  --background: #1a1a1a; /* Couleur de fond en mode sombre */
+  --text: #ffffff; /* Couleur du texte en mode sombre */
+  --primary: #818cf8; /* Couleur principale en mode sombre */
+  --secondary: #c4b5fd; /* Couleur secondaire en mode sombre */
+}
+
+/* Styles de base */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animations pour les sections */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Effets de survol pour les cartes */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons et liens */
+button, a {
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Formulaire */
+input, textarea {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  z-index: 1000;
+}
+
+#loader div {
+  border: 4px solid var(--primary);
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar */
+nav ul li a {
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skill-circle {
+  @apply relative w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6;
+}
+
+.skill-circle::after {
+  content: "";
+  @apply absolute inset-0 rounded-full border-2 border-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.skill-icon {
+  @apply text-4xl text-gray-200;
+}
+
+.skill-name {
+  @apply mt-4 block text-center font-mono text-sm text-gray-300;
+}
+
+
+/* Animation d'ouverture et fermeture pour Lightbox */
+.lightboxOverlay {
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out;
+}
+.lightboxClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.lightboxClose:hover {
+  transform: scale(1.2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

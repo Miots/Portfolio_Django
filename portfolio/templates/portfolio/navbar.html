@@ -1,13 +1,26 @@
-<nav id="nav-menu" class="animate__animated animate__fadeInDown">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
+<nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-gradient">
+      <i class="fas fa-code mr-2"></i>miots.dev
+    </a>
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#about" class="hover:text-primary transition-colors duration-300">&lt;About/&gt;</a></li>
+      <li><a href="#skills" class="hover:text-primary transition-colors duration-300">&lt;Skills/&gt;</a></li>
+      <li><a href="#projects" class="hover:text-primary transition-colors duration-300">&lt;Projects/&gt;</a></li>
+      <li><a href="#services" class="hover:text-primary transition-colors duration-300">&lt;Services/&gt;</a></li>
+      <li><a href="#certifications" class="hover:text-primary transition-colors duration-300">&lt;Certifications/&gt;</a></li>
+      <li><a href="#contact" class="hover:text-primary transition-colors duration-300">&lt;Contact/&gt;</a></li>
     </ul>
-</nav>
-<button id="toggle-btn">
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-</button>
+    <button id="mobile-menu-btn" class="md:hidden text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-card py-4">
+    <ul class="flex flex-col items-center space-y-4">
+      <li><a href="#about" class="hover:text-primary transition-colors duration-300">&lt;About/&gt;</a></li>
+      <li><a href="#skills" class="hover:text-primary transition-colors duration-300">&lt;Skills/&gt;</a></li>
+      <li><a href="#projects" class="hover:text-primary transition-colors duration-300">&lt;Projects/&gt;</a></li>
+      <li><a href="#services" class="hover:text-primary transition-colors duration-300">&lt;Services/&gt;</a></li>
+      <li><a href="#certifications" class="hover:text-primary transition-colors duration-300">&lt;Certifications/&gt;</a></li>
+      <li><a href="#contact" class="hover:text-primary transition-colors duration-300">&lt;Contact/&gt;</a></li>
+    </ul>
+  </div>

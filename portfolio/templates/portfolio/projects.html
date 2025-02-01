@@ -1,32 +1,101 @@
 {% load static %}
-<section id="projects">
-    <h2 class="animate__animated animate__fadeInDown">My Projects</h2>
-    <div class="project animate__animated animate__fadeInUp">
-        <img src="{% static 'img/portfolio/java-ide-web.png' %}" alt="Project 1 Image" class="project-image">
-        <div class="project-details">
-            <h3>Project 1</h3>
-            <p>A web application for managing tasks efficiently. Built with Django and Python.</p>
-            <ul>
-                <li>Django</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <a href="lien.com"><i class="bx bx-right-arrow-alt"></i> Voir le projet</a>
-        </div>
+<section id="projects" class="py-16 text-center animate__animated animate__fadeIn">
+  <h1 class="text-4xl font-bold mb-8 font-mono text-center">&lt;MyProjects&gt;</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+    <!-- Projet 1 : Java IDE Web -->
+    <div class="relative bg-[var(--background)] rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group">
+      <a href="{% static 'img/project/java-ide-web.png' %}" data-lightbox="projects" data-title="Java IDE Web">
+        <img
+          src="{% static 'img/project/java-ide-web.png' %}"
+          alt="Java IDE Web"
+          class="w-full h-80 object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
+        />
+      </a>
+      <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h2 class="text-2xl font-bold text-white mb-3 font-mono">Java IDE Web = &#123;</h2>
+        <p class="text-white text-lg mb-4 font-mono">An online development environment for Java...</p>
+        <ul class="flex flex-wrap justify-center mb-4">
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Django</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">HTML</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">CSS</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">JavaScript</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Gemini</li>
+
+        </ul>
+        <a href="" target="_blank" class="bg-[var(--primary)] text-[var(--background)] px-4 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors duration-300 font-mono transform hover:scale-110 hover:rotate-3">
+          view(project)
+        </a>
+        <!-- Lien vers l'image en grand format -->
+        
+      </div>
     </div>
-    <div class="project animate__animated animate__fadeInUp">
-        <img src="{% static 'img/portfolio/produit.png' %}" alt="Project 2 Image" class="project-image">
-        <div class="project-details">
-            <h3>Project 2</h3>
-            <p>An e-commerce website with dynamic product listings and a user-friendly interface. Developed using HTML, CSS, and JavaScript.</p>
-            <ul>
-                <li>Django</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <a href="lien.com"><i class="bx bx-right-arrow-alt"></i> Voir le projet</a>
-        </div>
+
+    <!-- Projet 2 : E-commerce Website -->
+    <div class="relative bg-[var(--background)] rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group">
+      <a href="{% static 'img/project/ecommerce.png' %}" data-lightbox="projects" data-title="E-commerce Website">
+        <img
+          src="{% static 'img/project/ecommerce.png' %}"
+          alt="E-commerce Website"
+          class="w-full h-80 object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
+        />
+      </a>
+      <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h2 class="text-2xl font-bold text-white mb-3 font-mono">E-commerce Website = &#123;</h2>
+        <p class="text-white text-lg mb-4 font-mono">An online shopping platform integrating AI...</p>
+        <ul class="flex flex-wrap justify-center mb-4">
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Django</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">HTML</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">CSS</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">JavaScript</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Gemini</li>
+
+        </ul>
+        <a href="" target="_blank" class="bg-[var(--primary)] text-[var(--background)] px-4 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors duration-300 font-mono transform hover:scale-110 hover:rotate-3">
+          view(project)
+        </a>
+        <!-- Lien vers l'image en grand format -->
+        
+      </div>
     </div>
+
+    <!-- Projet 3 : Portfolio Website -->
+    <div class="relative bg-[var(--background)] rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 group">
+      <a href="{% static 'img/project/portfolio.png' %}" data-lightbox="projects" data-title="Portfolio Website">
+        <img
+          src="{% static 'img/project/portfolio.png' %}"
+          alt="Portfolio Website"
+          class="w-full h-80 object-cover cursor-pointer transition-transform duration-300 group-hover:scale-110"
+        />
+      </a>
+      <div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h2 class="text-2xl font-bold text-white mb-3 font-mono">Portfolio Website = &#123;</h2>
+        <p class="text-white text-lg mb-4 font-mono">A personal website showcasing projects...</p>
+        <ul class="flex flex-wrap justify-center mb-4">
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Django</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">HTML</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">CSS</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">JavaScript</li>
+          <li class="bg-[var(--primary)] text-[var(--background)] px-2 py-1 rounded-full m-1 font-mono text-sm">Tailwind CSS</li>
+
+        </ul>
+        <a href="" target="_blank" class="bg-[var(--primary)] text-[var(--background)] px-4 py-2 rounded-full hover:bg-[var(--secondary)] transition-colors duration-300 font-mono transform hover:scale-110 hover:rotate-3">
+          view(project)
+        </a>
+        <!-- Lien vers l'image en grand format -->
+
+      </div>
+    </div>
+  </div>
+
+  <h1 class="text-4xl font-bold mt-8 font-mono text-center">
+    &lt;/MyProjects&gt;
+  </h1>
 </section>
+
+<!-- Ajouter le script pour Lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Ajouter le script pour Font Awesome pour les icônes -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+

@@ -1,25 +1,85 @@
-{% load static %}
-<section id="contact" class="contact-section">
-    <h2 class="animate__animated animate__fadeInDown">Contact</h2>
-    <form method="post" class="contact-form animate__animated animate__fadeInUp">
-        {% csrf_token %}
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
+<section id="contact" class="py-24 text-center animate__animated animate__fadeIn">
+  <h1 class="text-4xl font-bold mb-12 font-mono">&lt;Contact&gt;</h1>
+  <div class="container mx-auto px-4">
+    <form class="max-w-lg mx-auto" method="POST" action="{% url 'send_email' %}">
+      {% csrf_token %}
+      <div class="mb-4">
+        <label for="name" class="block mb-2 font-mono">
+          name:
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 font-mono bg-[var(--background)] text-[var(--text)] border-[var(--text)] focus:ring-[var(--primary)] transition-all duration-300 focus:scale-105"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block mb-2 font-mono">
+          email:
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 font-mono bg-[var(--background)] text-[var(--text)] border-[var(--text)] focus:ring-[var(--primary)] transition-all duration-300 focus:scale-105"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="subject" class="block mb-2 font-mono">
+          objet:
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 font-mono bg-[var(--background)] text-[var(--text)] border-[var(--text)] focus:ring-[var(--primary)] transition-all duration-300 focus:scale-105"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block mb-2 font-mono">
+          message:
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 font-mono bg-[var(--background)] text-[var(--text)] border-[var(--text)] focus:ring-[var(--primary)] transition-all duration-300 focus:scale-105"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-[var(--primary)] text-[var(--background)] px-4 py-2 rounded-lg hover:bg-[var(--secondary)] transition-all duration-300 font-mono hover:scale-105 hover:shadow-lg"
+      >
+        sendMessage()
+      </button>
     </form>
-    <p>Phone: +261 34 12 345 67</p>
-    <p>Contact me: 
-        <a href="https://linkedin.com/in/miotisoa" target="_blank" class="contact-icon"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/miotisoa" target="_blank" class="contact-icon"><i class="fab fa-github"></i></a>
-        <a href="https://facebook.com" target="_blank" class="contact-icon"><i class="fab fa-facebook"></i></a>
-        <a href="https://whatsapp.com" target="_blank" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:miotsrandriamihaja@mail.com" target="_blank" class="contact-icon"><i class="fas fa-envelope"></i></a>
-    </p>    
+  </div>
+
+
+  <div class="flex justify-center space-x-4 mt-8">
+    <a href="https://www.facebook.com/miots.fitia" class="text-blue-600 text-2xl hover:opacity-80" title="Facebook" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/r.miots/" class="text-pink-600 text-2xl hover:opacity-80" title="Instagram" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/miotisoa-randriamihaja-84b88b2bb/" class="text-blue-700 text-2xl hover:opacity-80" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Miots" class="text-gray-800 text-2xl hover:opacity-80" title="Github" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://wa.me/261383032824?text=Bonjour%20je%20souhaite%20vous%20contacter" class="text-green-600 text-2xl hover:opacity-80" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="/cdn-cgi/l/email-protection#c1aca8aeb5b2b3a0afa5b3a8a0aca8a9a0aba081a6aca0a8adefa2aeac" class="text-red-600 text-2xl hover:opacity-80" title="Gmail" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+  <h1 class="text-4xl font-bold mt-12 text-center font-mono">&lt;/Contact&gt;</h1>
 </section>

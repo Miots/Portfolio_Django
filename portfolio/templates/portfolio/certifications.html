@@ -1,18 +1,25 @@
 {% load static %}
-<section id="certifications">
-    <h2 class="certifications-title animate__animated animate__fadeInDown">Certifications</h2>
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="{% static 'img/certificate/certificate-freecodecamp-javascript-algo-data-structure.png' %}" 
-                     alt="JavaScript Algorithm and Data Structure" class="certification-image">
-                <p class="certificate-description">JavaScript Algorithm and Data Structure</p>
-            </div>
-            <div class="slide">
-                <img src="{% static 'img/certificate/certificate-freecodecamp-responsive-web-design.jpeg' %}" 
-                     alt="Responsive Web Design Certification" class="certification-image">
-                <p class="certificate-description">Responsive Web Design Certification</p>
-            </div>
-        </div>
+<section id="certifications" class="py-24 text-center animate__animated animate__fadeIn">
+  <h1 class="text-4xl font-bold mb-12 font-mono">&lt;Certifications&gt;</h1>
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="w-full md:w-1/3 p-4 rounded-lg shadow-lg bg-[var(--background)] transition-all duration-300 hover:shadow-xl hover:scale-105">
+        <img
+          src="{% static 'img/certificate/certificate-freecodecamp-responsive-web-design.jpeg' %}"
+          alt="Responsive Web Design"
+          class="w-full rounded"
+        />
+        <p class="mt-4 font-mono">const responsiveWebDesign = "Completed";</p>
+      </div>
+      <div class="w-full md:w-1/3 p-4 rounded-lg shadow-lg bg-[var(--background)] transition-all duration-300 hover:shadow-xl hover:scale-105">
+        <img
+          src="{% static 'img/certificate/certificate-freecodecamp-javascript-algo-data-structure.png' %}"
+          alt="JavaScript Algorithms and Data Structures"
+          class="w-full rounded"
+        />
+        <p class="mt-4 font-mono">const jsAlgorithms = "Mastered";</p>
+      </div>
     </div>
+  </div>
+  <h1 class="text-4xl font-bold mt-12 font-mono">&lt;/Certifications&gt;</h1>
 </section>
