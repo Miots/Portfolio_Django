@@ -1,3 +1,4 @@
+console.log('matrix.js chargé');
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 

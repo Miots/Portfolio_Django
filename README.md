@@ -20,7 +20,7 @@ Ce projet est un portfolio personnel développé avec Django. Il permet de prés
 
 1. Clonez le dépôt :
    ```sh
-   git clone https://github.com/Miots/Portfolio.git
+   git clone https://github.com/Miots/Portfolio_Django.git
    cd Portfolio
 Créez et activez un environnement virtuel :
 

@@ -133,3 +133,62 @@ section {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skill-circle {
+  @apply relative w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6;
+}
+
+.skill-circle::after {
+  content: "";
+  @apply absolute inset-0 rounded-full border-2 border-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.skill-icon {
+  @apply text-4xl text-gray-200;
+}
+
+.skill-name {
+  @apply mt-4 block text-center font-mono text-sm text-gray-300;
+}
+
+
+/* Animation d'ouverture et fermeture pour Lightbox */
+.lightboxOverlay {
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out;
+}
+.lightboxClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.lightboxClose:hover {
+  transform: scale(1.2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
