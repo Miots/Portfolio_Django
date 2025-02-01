@@ -3,7 +3,7 @@ services:
     name: django-app
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn miots_portfolio.wsgi"
+    startCommand: "gunicorn miots_portfolio.wsgi:application"
     plan: free
     envVars:
       - key: DJANGO_SECRET_KEY
