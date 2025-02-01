@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: django-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn miots_portfolio.wsgi:application"
+    plan: free
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: "django-insecure-))8x##(sdq1em2x35#t%!%9jse+3y%y9%ak23@r_=2dv%a^35s"
+      - key: DJANGO_SETTINGS_MODULE
+        value: "miots_portfolio.settings"
